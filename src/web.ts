@@ -1,10 +1,13 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { CapacitorSystemSoundsPlugin } from './definitions';
+import type { SystemSoundsPlugin } from './definitions';
 
-export class CapacitorSystemSoundsWeb extends WebPlugin implements CapacitorSystemSoundsPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+export class SystemSoundsWeb extends WebPlugin implements SystemSoundsPlugin {
+  getSystemSounds(): Promise<{ sounds: { title: string; uri: string; }[]; }> {
+    throw new Error('Method not implemented web.');
+  }
+  salveSoundLocation(systemSound: { uri: string; }): Promise<{ filePath: string; }> {
+    systemSound
+    throw new Error('Method not implemented web.');
   }
 }
