@@ -7,22 +7,22 @@ let package = Package(
     products: [
         .library(
             name: "GuilhermeabreudevCapacitorSystemSounds",
-            targets: ["CapacitorSystemSoundsPlugin"])
+            targets: ["SystemSoundsPlugin"])
     ],
     dependencies: [
         .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", branch: "main")
     ],
     targets: [
         .target(
-            name: "CapacitorSystemSoundsPlugin",
+            name: "SystemSoundsPlugin",
             dependencies: [
                 .product(name: "Capacitor", package: "capacitor-swift-pm"),
                 .product(name: "Cordova", package: "capacitor-swift-pm")
             ],
-            path: "ios/Sources/CapacitorSystemSoundsPlugin"),
+            path: "ios/Sources/SystemSoundsPlugin"),
         .testTarget(
-            name: "CapacitorSystemSoundsPluginTests",
-            dependencies: ["CapacitorSystemSoundsPlugin"],
-            path: "ios/Tests/CapacitorSystemSoundsPluginTests")
+            name: "SystemSoundsPluginTests",
+            dependencies: ["SystemSoundsPlugin"],
+            path: "ios/Tests/SystemSoundsPluginTests")
     ]
 )
