@@ -1,10 +1,11 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { CapacitorSystemSoundsPlugin } from './definitions';
+import type { SystemSoundsPlugin } from './definitions';
 
-const CapacitorSystemSounds = registerPlugin<CapacitorSystemSoundsPlugin>('CapacitorSystemSounds', {
-  web: () => import('./web').then((m) => new m.CapacitorSystemSoundsWeb()),
+const SystemSounds = registerPlugin<SystemSoundsPlugin>('SystemSounds', {
+  web: () => import('./web').then((m) => new m.SystemSoundsWeb()),
 });
 
 export * from './definitions';
-export { CapacitorSystemSounds };
+export { SystemSounds };
+
