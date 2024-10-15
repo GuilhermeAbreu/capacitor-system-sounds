@@ -13,25 +13,55 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`getSystemSounds(...)`](#getsystemsounds)
+* [`salveSoundLocation(...)`](#salvesoundlocation)
+* [Enums](#enums)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### getSystemSounds(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+getSystemSounds(configSystemSound: { type: SystemSoundsType; }) => Promise<{ sounds: { title: string; uri: string; }[]; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param                   | Type                                                                     |
+| ----------------------- | ------------------------------------------------------------------------ |
+| **`configSystemSound`** | <code>{ type: <a href="#systemsoundstype">SystemSoundsType</a>; }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ sounds: { title: string; uri: string; }[]; }&gt;</code>
 
 --------------------
+
+
+### salveSoundLocation(...)
+
+```typescript
+salveSoundLocation(systemSound: { uri: string; name: string; }) => Promise<{ filePath: string; }>
+```
+
+| Param             | Type                                        |
+| ----------------- | ------------------------------------------- |
+| **`systemSound`** | <code>{ uri: string; name: string; }</code> |
+
+**Returns:** <code>Promise&lt;{ filePath: string; }&gt;</code>
+
+--------------------
+
+
+### Enums
+
+
+#### SystemSoundsType
+
+| Members            | Value          |
+| ------------------ | -------------- |
+| **`RINGTONE`**     | <code>1</code> |
+| **`NOTIFICATION`** | <code>2</code> |
+| **`ALARM`**        | <code>4</code> |
+| **`ALL`**          | <code>7</code> |
 
 </docgen-api>
