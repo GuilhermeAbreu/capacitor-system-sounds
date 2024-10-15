@@ -1,12 +1,12 @@
 import XCTest
-@testable import CapacitorSystemSoundsPlugin
+@testable import SystemSoundsPlugin
 
-class CapacitorSystemSoundsTests: XCTestCase {
+class SystemSoundsTests: XCTestCase {
     func testEcho() {
         // This is an example of a functional test case for a plugin.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 
-        let implementation = CapacitorSystemSounds()
+        let implementation = SystemSounds()
         let value = "Hello, World!"
         let result = implementation.echo(value)
 
