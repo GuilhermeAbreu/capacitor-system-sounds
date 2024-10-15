@@ -13,12 +13,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@capacitor/core": "latest",
+    "@capacitor-community/file-opener": "github:capacitor-community/file-opener",
+    "@capacitor-community/native-audio": "^6.0.0",
+    "@capacitor/android": "^6.0.0",
     "@capacitor/camera": "latest",
-    "@capacitor/splash-screen": "latest",
-    "@guilhermeabreudev/capacitor-system-sounds": "file:..",
+    "@capacitor/core": "latest",
     "@capacitor/ios": "^6.0.0",
-    "@capacitor/android": "^6.0.0"
+    "@capacitor/splash-screen": "latest",
+    "@guilhermeabreudev/capacitor-system-sounds": "file:.."
   },
   "devDependencies": {
     "@capacitor/cli": "latest",
