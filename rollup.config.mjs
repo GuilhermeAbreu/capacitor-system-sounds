@@ -4,7 +4,7 @@ export default {
     {
       file: 'dist/plugin.js',
       format: 'iife',
-      name: 'capacitorCapacitorSystemSounds',
+      name: 'systemSounds',
       globals: {
         '@capacitor/core': 'capacitorExports',
       },
